@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Height_Weight</title>
+	<style type="text/css">
+		h1{
+			background-color: green;
+			color: white;
+			maring: 10px;
+			paddng: 10px;
+			text-align: center;
+		}
+		img{
+			border: 2px solid red;
+		}
+		label{
+			border: 2px solid green;
+			border-style: round;
+			border-bottom-right-radius: !important;
+			background-color: green;
+			color: white;
+			font-size: 16;
+			font-family: serif;
+		}
+		button{
+			border: 2px solid red;
+			border-style: groove;
+			background-color: lightblue;
+			color: black;
+		}
+		h2{
+			background-color: green;
+			color: white;
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class = "header">
+		<h1>Welcome to Weight Prediction Page</h1>
+	</div>
+	<div class="image">
+		<center>
+			<img src="static/images/h.png" alt="imge">
+		</center>
+	</div>
+	<br>
+	<center>
+		<div>
+			<form action ="{{url_for('predict')}}" method = 'POST'>
+				<label for = "Height">Enter your Height:</label>
+				<input type="text" name="a" required = "required" placeholder = "Please Enter your Height">
+				<br>
+				<br>
+				<button type ="submit">Predict</button>
+			</form>
+	</div>
+	</center>
+	<br>
+	<center>
+	<div>
+		<h2>Output Information</h2>
+	</div>
+	<center>
+		<h2>{{prediction_text}}</h2>
+	</center>
+	</center>
+	
+	
+
+</body>
+</html>
