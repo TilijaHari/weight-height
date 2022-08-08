@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-# -*- coding: utf-8 -*-
 """
 Project:- Predict the weight of people by Machine learning.
 """
@@ -24,4 +23,5 @@ def predict():
     output = round(pred[0],2)
     return render_template('index.html',prediction_text ="Your predicted weight in pounds is: {}".format(output))
 if __name__=='__main__':
-    app.run()
+    app.run(host='0.0.0.0',port=8080)
+    #app.run()
